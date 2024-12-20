@@ -13,6 +13,6 @@ RUN apt-get update && apt-get install -y \
 RUN curl -fsSL https://ollama.com/install.sh | sh
 
 ENV OLLAMA_HOST=0.0.0.0:11434
-ENV OLLAMA_MODELS=/workspace/models
+ENV OLLAMA_MODELS=/workspace/ollama
 
 CMD ["ollama", "serve"]

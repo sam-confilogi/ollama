@@ -33,7 +33,8 @@ start_ollama() {
 start_comfyui() {
     echo "Starting ComfyUI..."
     if [ -f "/workspace/run_gpu.sh" ]; then
-        /workspace/run_gpu.sh &
+        cd /workspace
+        ./run_gpu.sh &
     else
         echo "Warning: ComfyUI startup script not found at /workspace/run_gpu.sh"
     fi
