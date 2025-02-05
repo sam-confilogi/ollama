@@ -1,4 +1,4 @@
-FROM runpod/pytorch:2.2.0-py3.10-cuda12.1.1-devel-ubuntu22.04
+FROM runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04
 
 # Add post_start.sh to the container
 ADD post_start.sh /post_start.sh
@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     software-properties-common \
     ffmpeg \
+    htop \
+    nvtop \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL https://ollama.com/install.sh | sh
