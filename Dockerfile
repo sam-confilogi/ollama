@@ -11,7 +11,10 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     htop \
     nvtop \
+    python3-pip \
     && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir pyyaml
 
 RUN curl -fsSL https://ollama.com/install.sh | sh
 
